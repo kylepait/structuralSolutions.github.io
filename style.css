@@ -1,0 +1,304 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4; /* Soft background color */
+    color: #333; /* Neutral text color for readability */
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* Container for the form and image */
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Make children stretch to fill the container */
+    padding: 50px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Styling for the form and image to be equal height */
+.contact, .contact-right {
+    flex: 1; /* Take up 50% of the .contact-container space */
+    min-height: 500px; /* Minimum height for both elements */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space evenly */
+    overflow: hidden;
+}
+
+.contact {
+    margin-right: 25px; /* Maintain spacing between form and image */
+}
+
+.contact-left-title h2 {
+    color: #2c3e50; /* Navy blue title color */
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+hr {
+    margin-bottom: 20px;
+    border-color: #3498db; /* Bright blue line color */
+}
+
+.contact-inputs, textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 2px solid #ccc; /* Light border for subtle definition */
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for focus */
+}
+
+textarea {
+    height: 390px;
+}
+
+/* Button and input hover effects */
+.contact-inputs:hover, button:hover, textarea:hover {
+    border-color: #2980b9; /* Bright blue shade for hover */
+}
+
+.contact-inputs:focus, textarea:focus {
+    border-color: #3498db; /* Bright blue color for focus */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Styling the submit button to be more engaging */
+button {
+    background-color: #3498db; /* Bright blue button color */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add space between text and icon */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: auto; /* Push the button to the bottom of the form */
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker shade of blue for hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+button img {
+    width: 20px; /* Adjust icon size */
+}
+
+/* Right-side image styling */
+.contact-right img {
+    width: 100%; /* Make image take full width of its container */
+    height: auto; /* Adjust height automatically to maintain aspect ratio */
+    max-height: 100%; /* Ensure the image does not exceed the container's height */
+    object-fit: cover;
+    border-radius: 50px; /* Rounded corners for the image */
+    padding-top: 10px; /* This will cover the area without stretching the image */
+
+
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contact-right img {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .contact, .contact-right {
+        min-height: auto; /* Adjust min-height for mobile devices */
+    }
+    
+    .contact {
+        margin-right: 0; /* Remove margin for mobile view */
+    }
+}
+
+/* Header and logo styles */
+.page-header {
+    text-align: center; /* Center the logo */
+    padding: 20px 0; /* Add some padding around the logo for spacing */
+    background-color: #fff; /* Optional: background color for the header */
+    border-radius: 15px;
+}
+
+.logo {
+    max-width: 100%; /* Control the size of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Adjusts the spacing of the columns container */
+.three-column-section {
+    display: flex;
+    justify-content: space-around; /* Adjusts the spacing around items */
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 20px; /* Space between the columns */
+    margin-top: 50px; /* Space from the previous section */
+    margin-bottom: 50px; /* Space before the next section */
+}
+
+.column {
+    flex: 1; /* Each column takes up equal space */
+    padding: 20px; /* Padding inside each column */
+    background-color: #ffffff; /* White background for the content boxes */
+    border-radius: 10px; /* Rounded corners for the boxes */
+    box-shadow: 0 4px 20px #2c3e50; /* Light blue shadow */
+    margin: 0 10px; /* Adds a margin between columns */
+    box-sizing: border-box; /* Includes padding and border in the element's total width and height */
+}
+
+
+.column h3 {
+    margin-bottom: 15px; /* Space below each column's header */
+    color: #1d6cbb; /* Dark blue color for the headings */
+    font-size: 30px; /* Larger font size for headings */
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.column ul {
+    list-style-type: disc; /* Ensures bullet points are shown */
+    padding-left: 40px; /* Adjust this value as needed to increase space from the edge */
+    margin-left: 0; /* Ensure the list aligns properly with the left edge of its container */
+    padding-right: 20px; /* Adds padding on the right to maintain balance in the layout */
+}
+.column p, .column ul {
+    font-weight: bold;
+    font-size: 18px; /* Larger font size for paragraph text and lists */
+    color: #333; /* Neutral text color for readability */
+    line-height: 1.6; /* Space between lines */
+}
+
+.column ul li {
+    font-weight: bold;
+    text-align: left; /* Align list items to the left */
+    line-height: 1.6; /* Space between list items */
+}
+
+/* Responsive font size adjustments */
+@media (max-width: 768px) {
+    .column h3 {
+        font-size: 20px; /* Slightly smaller font size for mobile */
+    }
+
+    .column p, .column ul {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        max-width: 50%; /* Smaller logo on screens smaller than 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        max-width: 70%; /* Adjusts the size for very small devices */
+    }
+}
+
+
+.site-footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    background-color: #2c3e50; /* Dark navy blue background */
+    color: #ffffff; /* White text color */
+    font-size: 16px;
+    border-radius:10px 10px 10px 10px; /* Rounded bottom corners */
+}
+
+.site-footer p {
+    margin: 0; /* Removes default margin for a clean look */
+}
+
+.banner {
+    margin-top: 20px; /* Adds space between the logo and the banner */
+
+    background-color: #2c3e50; /* Example background color: blue */
+    color: #ffffff; /* Text color: white */
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px 10px 10px 10px; /* Rounded bottom corners */
+
+    
+}
+
+.contact-right {
+    padding: 30px; /* Increased padding */
+    background-color: #f0f0f0; /* Light grey background for visibility */
+    border-radius: 8px; /* Softened rounded corners */
+    font-family: Arial, sans-serif; /* Ensuring a clean, readable font is used */
+    font-weight: bold;
+}
+
+.contact-right h4 {
+    margin-top: 0;
+    color: #2980b9; /* Using a more striking color for headings */
+    font-size: 24px; /* Larger font size for headings */
+    margin-bottom: 15px; /* Increased spacing below headings */
+}
+
+.contact-right p {
+    color: #333; /* Darker color for better readability */
+    font-size: 18px; /* Larger font size for text */
+    line-height: 1.5; /* Increased line height for readability */
+    margin: 10px 0 20px; /* Adjusted margin for better spacing */
+}
+
+.contact-right p strong {
+    font-size: 20px; /* Slightly larger font size for emphasis */
+    color: #000; /* Even darker for emphasis */
+}
+
+
+
+.logo-banner {
+    margin-top: 20px; /* Adds space between the logo and the banner */
+
+    background-color: #ffffff; /* Example background color: blue */
+    color: #000; /* Text color: white */
+    text-align: center;
+    font-size: 50px;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 10px 10px 10px 10px; /* Rounded bottom corners */
+
+    
+}
+
+.framing-image {
+    display: block; /* Ensures the image does not align inline with text */
+    width: 100%;
+    max-width: 100%; /* Ensures the image is responsive and fits its container */
+    height: auto; /* Maintains aspect ratio */
+    margin: 20px auto; /* Centers the image with some space above and below */
+    border-radius: 10px; /* Adds rounded corners for a softer look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+
+
+
